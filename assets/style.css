@@ -108,50 +108,61 @@ h3 {
     border-radius : 5px;
     padding : 10px;
     margin-bottom : 10px;
+    animation : barAppear 2s ease-in forwards;
 }
 
 .mon-bar {
     height : 40px;
     background : var(--clr-soft-red);
+    animation : barAppearMon 2s ease-in forwards;
 }
 
 .tues-bar {
     height : 80px;
     background: var(--clr-soft-red);
+    animation : barAppearTues 2s ease-in forwards;
 }
 
 .wed-bar {
     height : 120px;
     background : var(--clr-cyan);
+    animation : barAppearWed 2s ease-in forwards;
 }
 
 .thurs-bar {
     height : 65px;
     background : var(--clr-soft-red);
+    animation : barAppearThurs 2s ease-in forwards;
 }
 
 .fri-bar {
     height : 55px;
     background : var(--clr-soft-red);
+    animation : barAppearFri 2s ease-in forwards;
 }
 
 .sat-bar {
     height : 90px;
     background : var(--clr-soft-red);
+    animation : barAppearSat 2s ease-in forwards;
 }
 
 .sun-bar {
     height : 60px; 
     background : var(--clr-soft-red);
+    animation : barAppearSun 2s ease-in forwards;
 }
 
 .expenditure {
     display : flex;
     align-items : center;
+    position : relative;
 }
 
 .total-heading {
     font-size : 3rem;
+    position : relative;
+    animation : fadeInLeft 2s ease-in forwards;
 }
 
 .progress {
@@ -166,4 +177,38 @@ h3 {
 
 .progress > p:nth-child(2), .total > p {
     color : var(--clr-medium-brown);
+}
+
+@keyframes barAppearMon {
+    0% {height : 0px;}
+    100% {height : 40px;}
+}
+@keyframes barAppearTues {
+    0% {height : 0px;}
+    100% {height : 80px;}
+}
+@keyframes barAppearWed {
+    0% {height : 0px;}
+    100% {height : 120px;}
+}
+@keyframes barAppearThurs {
+    0% {height : 0px;}
+    100% {height : 65px;}
+}
+@keyframes barAppearFri {
+    0% {height : 0px;}
+    100% {height : 55px;}
+}
+@keyframes barAppearSat {
+    0% {height : 0px;}
+    100% {height : 90px;}
+}
+@keyframes barAppearSun {
+    0% {height : 0px;}
+    100% {height : 60px;}
+}
+
+@keyframes fadeInLeft {
+    0% {opacity : 0; transform: translateX(-400px)}
+    100% {opacity : 1; transform : translateX(0px)}
 }
