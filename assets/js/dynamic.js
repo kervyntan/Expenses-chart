@@ -16,6 +16,8 @@ const fetchDailyExpenditure = async () => {
     console.log(listOfDays)
     for (let i = 0; i < listOfDays.length; i++) {
         listOfDays[i].children[1].innerText = res[i].day;
+        // listOfDays[i].children[0].style.height = res[i].amount + "px";
+        document.documentElement.style.setProperty('--animation-end-width-' + res[i].day, res[i].amount + "px");
     }
 }
 
