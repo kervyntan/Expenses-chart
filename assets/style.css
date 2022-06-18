@@ -121,6 +121,32 @@ h3 {
     padding : 10px;
     margin-bottom : 10px;
     animation : barAppear 2s ease-in forwards;
+    cursor : pointer;
+    position : relative;
+}
+
+.bar:hover {
+    opacity : 0.5;
+}
+
+.show {
+    display : block !important;
+}
+
+.disappear {
+    display : none !important;
+}
+
+.bar-amount {
+    background: var(--clr-dark-brown);
+    width : fit-content;
+    padding : 10px;
+    border-radius : 5px;
+    margin : 0 auto 10px auto;
+    display : none;
+    color : var(--clr-pale-orange);
+    font-weight : 700;
+    font-size : 1rem;
 }
 
 .mon-bar {
@@ -190,6 +216,7 @@ h3 {
 .progress > p:nth-child(2), .total > p {
     color : var(--clr-medium-brown);
 }
+
 
 @keyframes barAppearMon {
     0% {height : var(--animation-start-width)}
